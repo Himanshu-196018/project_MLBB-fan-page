@@ -4,11 +4,11 @@
     box-sizing: border-box;
     color: white;
 }
-root{
+:root{
     --theme-color : rgb(0,108,176);
 }
 body{
-    background-image: url("/res/bodyimg.jpg");
+    background-image: url("../res/bodyimg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body{
     display: none;
 }
 #bar{
-    background-image: url("/res/stunlogo.jpg");
+    background-image: url("../res/stunlogo.jpg");
     background-repeat: no-repeat;
     background-position: right;
     height: 105px;
