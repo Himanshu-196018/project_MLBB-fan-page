@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+}
+root{
+    --theme-color : rgb(0,108,176);
+}
+body{
+    background-image: url("/res/bodyimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: var(--theme-color);
+}
+#container{
+    margin: 15px;
+    background-color: rgba(255,255,255,.5);
+    min-height: 100vh;
+}
+#song{
+    display: none;
+}
+#bar{
+    background-image: url("/res/stunlogo.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 105px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2fr 1fr;
+}
+#bar::before{
+    background-image: linear-gradient(to right,rgba(0,108,176,.5),rgba(0,108,176,.5)),linear-gradient(to left, transparent 200px ,#006cb0 430px);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+/* header content */
+#barlogo img{
+    height: 70px;
+}
+#name{
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    font-size: 25px;
+}
+#menubar{
+    display: flex;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+/* media queries */
+@media only screen and (min-width:800px){
+    #barlogo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    #barlogo img{
+        height: 104px;
+    }
+    #menubar{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+}
